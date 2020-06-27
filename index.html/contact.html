@@ -99,19 +99,38 @@
         <div class="underline"></div>
       </div>
       <!--end of section title -->
+      <div class="alert">Your message has been sent</div>
+
       <div class="section-right page-info">
         <!-- contact page-->
-        <div class="container">
-          <div class="contact-box">
-              <input type="text" class="field" placeholder="Your Name">
-              <input type="text" class="field" placeholder="Your Email">
-              <input type="text" class="field" placeholder="Phone">
-              <textarea placeholder="Message" class="field"></textarea>
-              <button class="btn">Send</button>
+      
+          <form>
+            <div class="wrapper">
+
+            <div class="input_field">
+                <input type="text" id="name" placeholder="Name" required name="name">
             </div>
+          
+            <div class="input_field">
+                <input type="text" id="phone" placeholder="Number" required  name="phone">
+            </div>
+
+            <div class="input_field">
+              <input type="text" id="company"  placeholder="Company" name="company">
           </div>
+
+            <div class="input_field">
+                <input type="text" id="email" placeholder="Email" required name="email">
+            </div>
+            <div class="input_field">
+                <textarea placeholder="Message" id="message" type="text" required name="message"></textarea>
+            </div>       
+            <button class="btn hero-btn" type="submit">
+              <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            </button>  
+            
+          </form>
         </div>
-      </div>
     </section>
     <!-- ############## -->
     <!-- ############## -->
