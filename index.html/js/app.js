@@ -21,85 +21,20 @@ closeBtn.addEventListener("click", function () {
 // set year
 date.innerHTML = new Date().getFullYear();
 
-app.controller('mainCtrl', ['$scope', '$firebaseObject', '$firebaseArray', '$timeout', '$rootScope' , function($scope, $firebaseObject, $firebaseArray, $timeout, $rootScope) {
-
-  $scope.info = {}
-  $scope.info.current_year = new Date().getFullYear();
-  $scope.posts = []
-  var refPosts = firebase.database().ref().child("posts")
-  var temp = $firebaseArray(refPosts.limitToLast(6));
-  temp.$loaded()
-      .then(function() {
-          temp.reverse()
-          angular.forEach(temp, function (post) {
-              var localeDate = post.date
-              var extension = ".png";
-              if (post.image_url.includes(".jpg")){
-                  extension = ".jpg";
-              }else if (post.image_url.includes(".jpeg")){
-                  extension = ".jpeg";
-              }
-              var imageUrl = "https://firebasestorage.googleapis.com/v0/b/my-website-bf8d6.appspot.com/o/blog_images%2F"+localeDate+extension+"?alt=media"
-              post.image = imageUrl;
-              post.date = moment(localeDate, 'YYYYMMDDHHmm').locale('en').format('DD MMMM YYYY')
-          })
-
-          $scope.posts = []
-          for (var i = 0; i < temp.length; i++) {
-              $scope.posts.push(temp[i])
-          }
-          // var old_html = $("#slick").html();
-          // $("#slick").slick('slick');
-          $timeout(function() {
-              $("#slick").slick('unslick')
-              $("#slick").slick({
-                  "slidesToShow": 2,
-                  "slidesToScroll": 2,
-                  "dots": true,
-                  "infinite": false,
-
-                  "responsive": [
-                      {
-                          "breakpoint": 991,
-                          "settings": {
-                              "slidesToShow": 2,
-                              "slidesToScroll": 2
-                          }
-                      },
-                      {
-                          "breakpoint": 575,
-                          "settings": {
-                              "slidesToShow": 1,
-                              "slidesToScroll": 1
-                          }
-                      }
-                  ]
-              });
-          }, 10);
-
-      });
-  $("#role").typed({
-      strings: ["Software Engineer", "Mobile Developer", "Mobile Designer", "Web Developer", "Digital Designer"],
-      typeSpeed: 100,
-      backDelay: 2000,
-      loop: true,
-      loopCount: false,
-      cursorChar: "|",
-  });
-}]);
 
 
 //Firebase Database for storing Contact Info.
 
+// Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyC0XdNnmNnIquzHQ48ejrZW7H0biFrhpVg",
-  authDomain: "my-blog-1b1ba.firebaseapp.com",
-  databaseURL: "https://my-blog-1b1ba.firebaseio.com",
-  projectId: "my-blog-1b1ba",
-  storageBucket: "my-blog-1b1ba.appspot.com",
-  messagingSenderId: "77775088481",
-  appId: "1:77775088481:web:f3212f2bec1b81e538b320",
-  measurementId: "G-KJBLZDMRV1"
+  apiKey: "AIzaSyD-_LzhS2DDE3JSoyjfV85G_QaL2jXyCBU",
+  authDomain: "personal-blog-ca694.firebaseapp.com",
+  databaseURL: "https://personal-blog-ca694.firebaseio.com",
+  projectId: "personal-blog-ca694",
+  storageBucket: "personal-blog-ca694.appspot.com",
+  messagingSenderId: "912964403902",
+  appId: "1:912964403902:web:0bc02967672943bfc554ef",
+  measurementId: "G-5NJLYMXGCQ"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
