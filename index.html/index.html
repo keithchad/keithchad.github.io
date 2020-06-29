@@ -28,6 +28,13 @@
   </head>
   
   <body>
+<!--Loader Start-->
+
+<div class="loader_bg">
+  <div class="loader"></div>
+</div>
+
+<!--Loader End-->
 
 <!-- Header -->
     <!-- navbar -->
@@ -111,15 +118,6 @@
       </div>
     </aside>
     <!-- end of sidebar -->
-
-    <!--Loader Start-->
-
-   <div class="loader_bg">
-      <div class="loader"></div>
-   </div>
-
-<!--Loader End-->
-
     <!-- header -->
     <header class="hero">
       <div class="section-center hero-center">
@@ -670,6 +668,12 @@
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      setTimeout(function() {
+        $('.loader_bg').fadeToggle();
+      }, 1500);
+    </script>
 
 
   </body>
