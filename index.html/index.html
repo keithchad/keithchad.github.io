@@ -28,13 +28,15 @@
   </head>
   
   <body>
-<!--Loader Start-->
-
-<div class="loader_bg">
-  <div class="loader"></div>
+<!-- Preloader -->
+<div class="spinner-wrapper">
+  <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+  </div>
 </div>
-
-<!--Loader End-->
+<!-- end of preloader -->
 
 <!-- Header -->
     <!-- navbar -->
@@ -671,7 +673,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
       setTimeout(function() {
-        $('.loader_bg').fadeToggle();
+        $('.spinner-wrapper').fadeToggle();
       }, 1500);
     </script>
 
