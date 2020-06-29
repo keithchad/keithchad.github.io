@@ -6,25 +6,6 @@ Fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
 
-/* 6.11 Loader
-----------------------------------------------------------*/
-#page-loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 10000;
-}
-
-#page-loader .loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -16px;
-  margin-top: -16px;
-}
-
 /* Loader */
 
 .loader_bg {
