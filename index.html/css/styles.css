@@ -19,7 +19,7 @@
 }
 
 .loader:before, .loader:after{
-  content:'';
+  content:'hey';
   border: lem solid #ff5733;
   border-radius: 50%;
   width: inherit;
