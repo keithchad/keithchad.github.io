@@ -33,8 +33,8 @@ var firebaseConfig = {
   projectId: "personal-blog-ca694",
   storageBucket: "personal-blog-ca694.appspot.com",
   messagingSenderId: "912964403902",
-  appId: "1:912964403902:web:0bc02967672943bfc554ef",
-  measurementId: "G-5NJLYMXGCQ"
+  appId: "1:912964403902:web:3ced5a7c80c5f71ac554ef",
+  measurementId: "G-ZQCR7D4DE7"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
