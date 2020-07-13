@@ -13,6 +13,17 @@
   </head>
 
   <body>
+
+    <!-- Preloader -->
+<div class="spinner-wrapper">
+  <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+  </div>
+</div>
+<!-- end of preloader -->
+
     <!-- navbar -->
     <nav class="nav" id="nav">
       <div class="nav-center">
@@ -200,5 +211,12 @@
       <p>&copy; <span id="date"></span> Keith Chad. All rights reserved.</p>
     </footer>
     <script src="./js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      setTimeout(function() {
+        $('.spinner-wrapper').fadeToggle();
+      }, 1500);
+    </script>
+
   </body>
 </html>
