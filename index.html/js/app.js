@@ -70,7 +70,7 @@ function submitForm(e){
 
   // Clear form
   document.getElementById('contactForm').reset();
-}
+} 
 
 // Function to get get form values
 function getInputVal(id){
@@ -82,9 +82,10 @@ function saveMessage(name, company, email, phone, message){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
     name: name,
-    company:company,
-    email:email,
-    phone:phone,
-    message:message
+    company: company,
+    email: email,
+    phone: phone,
+    message: message
   });
 }
+ 
